@@ -8,9 +8,12 @@ import os
 load_dotenv()
 
 # === CONFIG ===
-client = openai.OpenAI(api_key=os.getenv("OPENAI_API"))  # Replace with your key
-TOGETHER_API_KEY = os.getenv("TOGETHER_API")
-SEARCHAPI_KEY = os.getenv("SEARCH_API")
+#client = openai.OpenAI(api_key=os.getenv("OPENAI_API"))  # Replace with your key
+#TOGETHER_API_KEY = os.getenv("TOGETHER_API")
+#SEARCHAPI_KEY = os.getenv("SEARCH_API")
+OPENAI_API_KEY = st.secrets["OPENAI_API"]
+TOGETHER_API_KEY = st.secrets["TOGETHER_API"]
+SEARCHAPI_KEY = st.secrets["SEARCH_API"]
 TOGETHER_MODEL = "mistralai/Mistral-7B-Instruct-v0.1"
 
 # === TOGETHER.AI: Prompt → Clean Query ===
